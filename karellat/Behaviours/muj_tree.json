@@ -1,0 +1,111 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"CV6Eu6zxSyUYOaXet7UiHHHarSJwLBNj": {
+			"height": 70,
+			"title": "roleSplit",
+			"width": 202,
+			"x": 275,
+			"y": -31
+		},
+		"Q1ERNirVyuJUUe1xjCksispg9ZVnGZ7U": {
+			"height": 90,
+			"title": "Common.relativeMove",
+			"width": 344,
+			"x": 779,
+			"y": 17
+		},
+		"XIDke2X0oqVFZQ6sMXk7WBseVhTvfYwi": {
+			"height": 72,
+			"title": "echo",
+			"width": 174,
+			"x": 537,
+			"y": 87
+		},
+		"fHrQrpULeUkbwqzfeHqbrE6RmymJeGif": {
+			"height": 94,
+			"title": "store",
+			"width": 159,
+			"x": 791,
+			"y": -91
+		},
+		"nxq9Imne5iOKg9GpQhxY2gZfQAuG4niM": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 552,
+			"y": -68
+		}
+	},
+	"roles": [ {
+		"categories": [ "karellat.muj_com" ],
+		"name": "Muj commander"
+	}, {
+		"categories": [ "karellat.muj_pw" ],
+		"name": "Muj pw"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [ {
+				"children": [],
+				"id": "fHrQrpULeUkbwqzfeHqbrE6RmymJeGif",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "wind"
+				}, {
+					"name": "value",
+					"value": "map.Wind()"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "Q1ERNirVyuJUUe1xjCksispg9ZVnGZ7U",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "dist",
+					"value": "{x = 100*wind[\"dirX\"] , z =100* wind[\"dirZ\"]}"
+				}, {
+					"name": "fight",
+					"value": "false"
+				}, {
+					"name": "scriptName",
+					"value": "Common.relativeMove"
+				} ],
+				"scriptName": "Common.relativeMove"
+			} ],
+			"id": "nxq9Imne5iOKg9GpQhxY2gZfQAuG4niM",
+			"nodeType": "sequence",
+			"parameters": []
+		}, {
+			"children": [],
+			"id": "XIDke2X0oqVFZQ6sMXk7WBseVhTvfYwi",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "msg",
+				"value": "\"Stand strong!\""
+			}, {
+				"name": "scriptName",
+				"value": "echo"
+			} ],
+			"scriptName": "echo"
+		} ],
+		"id": "CV6Eu6zxSyUYOaXet7UiHHHarSJwLBNj",
+		"nodeType": "roleSplit",
+		"parameters": [ {
+			"name": "mode",
+			"value": "all-success"
+		} ]
+	}
+}
